@@ -1,0 +1,41 @@
+<div>
+  <p class="h1" style='margin-top:1em; margin-bottom: 1em;'> Conor Mcgregor Tweets </p>
+  <div class="row">
+
+    <div class="col-3">
+      <ul class="list-group">
+        <li *ngFor="let name of names" class="list-group-item" [class.active]="name.active"
+          (click)="onClick($event,name.id)">{{name.name}}</li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+
+
+          <div style="display:grid; grid-template-columns: 30% 30% 30%;">
+            <div class="card mb-20" style="width: 18rem;" *ngFor="let d of data?.data">
+
+              <div class="card-body">
+                <p class="card-text" style="font-size: 0.7rem; color:rgb(105, 105, 105)">created at :
+                  {{d.created_at}}</p>
+                <p class="card-text">{{d.text}}</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+          ...
+        </div>
+        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+          ...
+        </div>
+        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+          ...
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
