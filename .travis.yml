@@ -1,6 +1,13 @@
 languauge: node_js
 node_js:
   - 12.14.0
+env:
+  global:
+    -MOZ_HEADLESS=1
+
+  addons:
+    firefox: latest
+
 cache: npm
 
 
