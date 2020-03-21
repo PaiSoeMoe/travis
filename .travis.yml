@@ -4,11 +4,11 @@ node_js:
 cache:npm
 
 install:
-  - npm ci
+- npm ci
 
 script:
-  - npm test
-  - npm build --prod
+- npm test
+- npm build --prod
 
 deploy:
   provider: pages
