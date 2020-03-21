@@ -15,8 +15,7 @@ install:
   - npm ci
 
 script:
-  - npm test
-  - npm run-script build
+  - npm build
 
 deploy:
   provider: pages
