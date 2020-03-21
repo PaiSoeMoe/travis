@@ -1,8 +1,14 @@
 <div>
-  <p class="h1" style='margin-top:1em; margin-bottom: 1em;'> Conor Mcgregor Tweets </p>
+  <p class="h1" style='margin-top:1em; margin-bottom: 1em;'> {{heading}} Tweets </p>
+  <ul class="nav nav-tabs small-nav">
+    <li class="nav-item" *ngFor="let name of names">
+      <a class="nav-link" [class.active]="name.active" (click)="onClick($event,name.id)">{{name.name}}</a>
+    </li>
+
+  </ul>
   <div class="row">
 
-    <div class="col-3">
+    <div class="col-3 nav-bar">
       <ul class="list-group">
         <li *ngFor="let name of names" class="list-group-item" [class.active]="name.active"
           (click)="onClick($event,name.id)">{{name.name}}</li>
@@ -14,8 +20,8 @@
 
 
 
-          <div style="display:grid; grid-template-columns: 30% 30% 30%;">
-            <div class="card mb-20" style="width: 18rem;" *ngFor="let d of data?.data">
+          <div class="tweets">
+            <div class="card" *ngFor="let d of data?.data">
 
               <div class="card-body">
                 <p class="card-text" style="font-size: 0.7rem; color:rgb(105, 105, 105)">created at :
