@@ -1,5 +1,5 @@
 <div>
-  <p class="h1" style='margin-top:1em; margin-bottom: 1em;'> {{heading}} Tweets </p>
+  <h1 class="head1"> {{heading}} Tweets </h1>
   <ul class="nav nav-tabs small-nav">
     <li class="nav-item" *ngFor="let name of names">
       <a class="nav-link" [class.active]="name.active" (click)="onClick($event,name.id)">{{name.name}}</a>
