@@ -1,14 +1,14 @@
 languauge: node_js
 node_js:
-- 12.14.0
-cache:npm
+  - 12.14.0
+cache: npm
 
 install:
-- npm ci
+  - npm ci
 
 script:
-- npm test
-- npm build --prod
+  - npm test
+  - npm build --prod
 
 deploy:
   provider: pages
