@@ -18,6 +18,7 @@ before_script:
   - npm install -g @angular/cli
 
 script:
+  - ng test
   - ng build --prod --base-href https://paisoemoe.github.io//travis/
 
 deploy:
