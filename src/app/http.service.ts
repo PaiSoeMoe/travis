@@ -13,7 +13,7 @@ export class HttpService {
     const options = {
       params
     };
-    return this.http.get('http://localhost:3000/', options);
+    return this.http.get('https://mysterious-everglades-83861.herokuapp.com/twitter', options);
     // return throwError(new Error("can't connect to server"))
   }
 }
